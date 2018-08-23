@@ -2,3 +2,4 @@
 // Public deno module.
 export { exit, readFileSync, writeFileSync } from "./os";
 export { libdeno } from "./globals";
+export const argv: string[] = [];
