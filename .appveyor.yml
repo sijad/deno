@@ -306,6 +306,7 @@ before_build:
       Set-FilesNeeded -Auto -Path $outputs -Reason "Build dependency graph"
 
 build_script:
+  - ps: ninja -C $env:DENO_BUILD_PATH -n -d explain
   # Attempt to work around multiple rustc instances messing with the same file
   # when building in parallel.
   # TODO: fix this properly.
